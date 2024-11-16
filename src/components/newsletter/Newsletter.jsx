@@ -1,7 +1,9 @@
 import React from 'react';
 import { MdEmail } from "react-icons/md";
+import useForm from '../../hooks/useForm';
 
 const Newsletter = () => {
+  const { value, onChange, onBlur, erro } = useForm("email");
   const [inputNewsletter, setInputNewsletter] = React.useState(false);
   const handleInputNewsletter = ({ target }) => {
     if(target.ariaLabel === "newsletter") {
@@ -28,8 +30,8 @@ const Newsletter = () => {
                   Sign up to our newsletter for updates.
                 </p>
             </div>
-            <div className="flex flex-col gap-6 mt-10 md:mt-0">
-                <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="flex flex-col gap-12 mt-10 md:mt-0">
+                <div className="flex flex-col md:flex-row items-center relative gap-5">
                     <div 
                       className={inputNewsletter ? style.inputNewsletter.active : style.inputNewsletter.notActive}
                       onClick={handleInputNewsletter}
@@ -47,12 +49,20 @@ const Newsletter = () => {
                           id="email" 
                           placeholder="Your email"
                           aria-label="newsletter"
+                          value={value}
+                          onChange={onChange}
+                          onBlur={onBlur}
                         /> {/* codar um hook de email */}
                     </div>
                     <button className="w-[120px] px-4 py-2 bg-green text-neutral-700 font-semibold rounded-md hover:shadow-lg
                     hover:shadow-emerald-600 duration-150 ease-linear border border-green">
                         Sign up
                     </button>
+                    {erro && (
+                      <p className="font-bold text-rose-500 absolute bottom-[-30px] text-[.8rem]">
+                        {erro}
+                      </p>
+                    )}
                 </div>
                 <div className="text-sm md:text-lg">
                   <p className="font-medium text-white">
