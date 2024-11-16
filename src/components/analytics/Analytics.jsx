@@ -19,12 +19,12 @@ const Analytics = () => {
                 <h1 className="text-4xl text-black font-bold">
                     Manage Data Analytics
                 </h1>
-                <p className="text-neutral-400">
+                <p className="text-neutral-500 font-medium">
                     Analytics your CRIPTOS and other founds with our complete dashboard! <br/>
                     Analytics your SELIC and other founds with our complete dashboard!
                 </p>
-                <button className="px-4 py-2 w-[60%] md:w-[150px] bg-black text-white rounded-md font-semibold hover:scale-[1.03]
-                 hover:shadow-lg hover:shadow-slate-400 duration-150 ease-linear">
+                <button className="px-4 py-2 w-[40%] md:w-[150px] bg-black text-white rounded-md font-semibold hover:scale-[1.03]
+                 hover:shadow-lg hover:shadow-slate-400 duration-150 ease-linear mt-5">
                     Get Started
                 </button>
             </div>

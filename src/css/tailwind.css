@@ -7,3 +7,22 @@
         @apply bg-slate-950
     }
 }
+.animatePiscar {
+    animation: pisca 2s infinite;
+
+}
+@keyframes pisca {
+    0% { 
+        transform: translateY(0px);
+        background-color: #fff;
+    }
+    50% { 
+        transform: translateY(15px);
+        background-color: #00df9a;
+        color: #fff;
+    }
+    100% { 
+        transform: translateY(0px);
+        background-color: #fff;
+    }
+}
